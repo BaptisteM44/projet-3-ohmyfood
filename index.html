@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sass/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="fontawesome/CSS/all.css">
     <title>Ohmyfood</title>
 </head>
 <body>
     <header>
-        <img src="images/logo/ohmyfood.png" alt="logo ohmyfood" width="392" height="68">
+        <img class="logo" src="images/logo/ohmyfood.png" alt="logo ohmyfood" width="392" height="68">
     </header>
     <main>
         <section class="lieu">
             <i class="fa-map-marker-alt fas lieu-logo" aria-hidden="true"></i>
-            <span class="lieu-text"></span>
+            <span class="lieu-text">Paris, Belleville</span>
         </section>
         <section class="presentation">
             <h1 class="title-section">Réservez le menu qui vous convient</h1>
@@ -25,16 +25,19 @@
         <section class="work">
             <h1 class="title-section">Fonctionnement</h1>
             <div class="container">
-                <ol class="work-list">
+                <ol class="list">
                     <li class="work-list">
+                        <p class="work-list-num">1</p>
                         <i class="fas fa-mobile-alt work-icon"></i>
                         <span class="work-text">Choisissez un restaurant</span>
                     </li>
                     <li class="work-list">
+                        <p class="work-list-num">2</p>
                         <i class="fas fa-list-ul work-icon"></i>
                         <span class="work-text">Composez votre menu</span>
                     </li>
                     <li class="work-list">
+                        <p class="work-list-num">3</p>
                         <i class="fas fa-store work-icon"></i>
                         <span class="work-text">Dégustez au restaurant</span>
                     </li>
@@ -47,70 +50,59 @@
                 <div class="cards">
                     <div class="enseigne">
                         <a href="#" title="">
-                            <img src="" alt="" width="" height="">
-                            <span>Nouveau</span>
-                            <div class="enseigne-foot">
-                                <div class="enseigne-foot-texte">
-                                    <h3></h3>
-                                    <span></span>
-                                </div>
-                                <div class="logo-coeur">
-                                    <i class="far fa-heart"></i>
-                                </div>
+                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" width="4402" height="2935">
+                            <span class="text-img">Nouveau</span>
+                            <div class="enseigne-foot-texte">
+                                <h3>La palette du goût</h3>
+                                <span>Ménilmontant</span>
                             </div>
                         </a>
+                        <i class="far fa-heart coeur-plein"></i>
+                        <i class="fas fa-heart coeur-creux"></i>
+                        
                     </div>
                     <div class="enseigne">
                         <a href="#" title="">
-                            <img src="" alt="" width="" height="">
-                            <span>Nouveau</span>
-                            <div class="enseigne-foot">
-                                <div class="enseigne-foot-texte">
-                                    <h3></h3>
-                                    <span></span>
-                                </div>
-                                <div class="logo-coeur">
-                                    <i class="far fa-heart"></i>
-                                </div>
+                            <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée" width="3024" height="3780">
+                            <span class="text-img">Nouveau</span>
+                            <div class="enseigne-foot-texte">
+                                <h3>La note enchantée</h3>
+                                <span>Charonne</span>
                             </div>
                         </a>
+                        <i class="far fa-heart coeur-plein"></i>
+                        <i class="fas fa-heart coeur-creux"></i>
                     </div>
                     <div class="enseigne">
                         <a href="#" title="">
-                            <img src="" alt="" width="" height="">
-                            <span>Nouveau</span>
-                            <div class="enseigne-foot">
-                                <div class="enseigne-foot-texte">
-                                    <h3></h3>
-                                    <span></span>
-                                </div>
-                                <div class="logo-coeur">
-                                    <i class="far fa-heart"></i>
-                                </div>
+                            <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française" width="3936" height="2624">
+                            <span class="text-img">Nouveau</span>
+                            <div class="enseigne-foot-texte">
+                                <h3>À la française</h3>
+                                <span>Cité Rouge</span>
                             </div>
                         </a>
+                        <i class="far fa-heart coeur-plein"></i>
+                        <i class="fas fa-heart coeur-creux"></i>
                     </div>
                     <div class="enseigne">
                         <a href="#" title="">
-                            <img src="" alt="" width="" height="">
-                            <span>Nouveau</span>
-                            <div class="enseigne-foot">
-                                <div class="enseigne-foot-texte">
-                                    <h3></h3>
-                                    <span></span>
-                                </div>
-                                <div class="logo-coeur">
-                                    <i class="far fa-heart"></i>
-                                </div>
+                            <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens" width="5043" height="3456">
+                            <span class="text-img">Nouveau</span>
+                            <div class="enseigne-foot-texte">
+                                <h3>Le délice des sens</h3>
+                                <span>Folie-Méricourt</span>
                             </div>
                         </a>
+                        <i class="far fa-heart coeur-plein"></i>
+                        <i class="fas fa-heart coeur-creux"></i>
                     </div>
                 </div>
             </div>
         </section>
         <footer>
-            <div class="container">
-                <img src="images/logo/ohmyfood.png" alt="logo ohmyfood" width="392" height="68">
+            <div class="footer-container">
+                <span class="footer-logo">ohmyfood</span>
                 <a href="#">
                     <i class="fas fa-utensils"></i>
                     Proposer un restaurant
