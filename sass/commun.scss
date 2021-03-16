@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+body{
+font-family: 'Roboto', sans-serif;
+}
+// -------------------header-------------------//
+header{
+    display: flex;
+    justify-content: center;
+    padding: 18px;
+    box-shadow: 0px 0px 20px 0px #80808059;
+    overflow: hidden;
+    position: relative;
+        .logo{
+        width: 150px;
+        height: 30px;
+        display: flex;
+        }
+}
+// -------------------footer-------------------//
+footer{
+    background-color: #353535;
+        .footer-container{
+            display: flex;
+            flex-direction: column;
+            padding: 30px 30px;
+            max-width: 500px;
+            margin: auto;
+        }
+        .footer-logo{
+            font-size: 20px;
+            padding-bottom: 18px;
+            color: white;
+            font-family: Shrikhand,"cursive";
+            font-weight: 200;
+        }
+        a{
+            padding-bottom: 10px;
+            text-decoration: none;
+            color: white;
+                & i{
+                    font-size: 15px;
+                    padding-right: 7px;
+                }
+        }
+}
+// -------------------button-------------------//
+@mixin classic-button{
+    background: linear-gradient(to bottom right, #ff79da, #9356dc);
+    text-decoration: none;
+    border-radius: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 500;
+    color: white;
+    box-shadow: 0px 2px 4px 0px #80808059;
+    max-width: 220px;
+    margin: 0 auto;
+    padding: 2px 20px;
+        &:hover{
+            opacity: 0.7;                                        
+        }
+    }

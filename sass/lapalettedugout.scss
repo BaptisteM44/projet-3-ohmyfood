@@ -1,0 +1,123 @@
+@import "commun";
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+.head-menu{
+    img{
+        width: 100%;
+        max-height: 400px;
+        margin: 0px auto;
+        overflow: hidden;
+        object-fit: cover;
+    }
+}
+.menus-container{
+    background-color: #f6f6f6;
+    padding: 30px 20px;
+    border-radius: 25px 25px 0px 0px;
+    position: relative;
+    margin-top: -100px;
+    max-width: 500px;
+    margin: -100px auto 0px auto;
+}
+
+.titre-resto{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 40px;
+        h1{
+            font-size: 26px;
+            font-family: Shrikhand, "cursive";
+            font-weight: 400;
+        }
+        .menu-btn{
+            
+        }
+        .coeur-plein{
+            font-size: 25px;
+            cursor: pointer;
+            transition: 0.5s;
+            position: absolute;
+                top: 36px;
+                    right: 42px;
+            // z-index: 1;
+            // opacity: 0;
+            // mix-blend-mode: lighten;
+        }
+        .coeur-creux{
+            mix-blend-mode: lighten;
+            font-size: 25px;
+            cursor: pointer;
+            transition: 0.5s;
+            position: absolute;
+                top: 36px;
+                right: 42px;
+        
+                &.coeur-creux:hover{
+                    color: red !important;
+                    
+                }
+                &.coeur-plein:hover{
+                    color: red !important;
+                    // backgrounds: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc)) !important;
+                }
+
+        }
+    
+}
+.menu{
+    padding: 18px 0px;
+    h2{
+        position: relative;
+        font-weight: 400;
+        padding-bottom: 10px;
+    }
+    h2::after{
+        content: "";
+        width: 60px;
+        height: 5px;
+        background-color: #99e2d0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+.menu-commande{
+    align-items: center;
+    padding: 14px 15px;
+    border-radius: 15px;
+    margin: 16px auto;
+    box-shadow: 2px 2px 2px 2px #ededed;
+    background-color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    list-style-type: none;
+    transition: 0.5s;
+    justify-content: space-between;
+    .commande-texte{
+        h3{
+            font-size: 20px;
+            padding-bottom: 8px;
+        }
+        span{
+            font-size: 17px;
+        }
+    }
+        .commande-price{
+            position: absolute;
+                top: 44px;
+                right: 20px;
+                font-weight: 500;
+                font-size: 18px;
+                font-weight: 600;
+        }
+}
+.btn-commander{
+    padding: 40px 0;
+    a{
+        @include classic-button;
+    }
+    
+}

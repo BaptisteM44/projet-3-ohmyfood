@@ -1,29 +1,7 @@
-*{
-    margin: 0;
-    padding: 0;
-  }
-  
-body{
-font-family: 'Roboto', sans-serif;
-
-}
+@import "commun";
 h1{
     font-size: 24px;
     padding-bottom: 10px;
-}
-
-header{
-display: flex;
-justify-content: center;
-padding: 18px;
-box-shadow: 0px 0px 20px 0px #80808059;
-overflow: hidden;
-position: relative;
-    .logo{
-    width: 150px;
-    height: 30px;
-    display: flex;
-    }
 }
 .lieu{
     background-color: #eaeaea;
@@ -80,28 +58,29 @@ position: relative;
     display: flex;
     flex-direction: column;
     padding: 45px 35px;
+    max-width: 500px;
+    margin: auto;
     
 }
-.container{
-    .work-list{
-        align-items: center;
-        background-color: #f6f6f6;
-        padding: 32px 40px;
-        border-radius: 25px;
-        margin: 16px auto;
-        box-shadow: 0px 2px 4px 0px #80808059;
-        text-decoration: none;
-        cursor: pointer;
-        font-weight: 500;
-        position: relative;
-        list-style-type: none;
-        transition: 0.5s;
-            &:hover{
-                background-color: #f5edff;
-                .work-icon{
-                    color: #9356DC;
-                }
+.work-list{
+    align-items: center;
+    background-color: #f6f6f6;
+    padding: 32px 40px;
+    border-radius: 25px;
+    margin: 16px auto;
+    box-shadow: 0px 2px 4px 0px #80808059;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    list-style-type: none;
+    transition: 0.5s;
+        &:hover{
+            background-color: #f5edff;
+            .work-icon{
+                color: #9356DC;
             }
+        }
 }
 .work-icon{
     margin-right: 22px;
@@ -129,6 +108,12 @@ p{
     flex-direction: column;
     padding: 45px 30px;
     background-color: #f6f6f6;
+    max-width: 500px;
+        margin: auto;
+    .container{
+        max-width: 500px;
+        margin: auto;
+    }
         a{
             text-decoration: none;
             .text-img{
@@ -206,29 +191,5 @@ p{
         & span{
             font-size: 16px;
             color: black;  
-        }
-}
-
-footer{
-    background-color: #353535;
-        .footer-container{
-            display: flex;
-            flex-direction: column;
-            padding: 30px 30px;
-        }
-        .footer-logo{
-            font-size: 20px;
-            padding-bottom: 18px;
-            color: white;
-            font-family: Shrikhand,"cursive";
-        }
-        a{
-            padding-bottom: 10px;
-            text-decoration: none;
-            color: white;
-                & i{
-                    font-size: 15px;
-                    padding-right: 7px;
-                }
         }
 }

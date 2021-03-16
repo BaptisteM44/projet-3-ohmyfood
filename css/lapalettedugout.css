@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 18px;
+  box-shadow: 0px 0px 20px 0px #80808059;
+  overflow: hidden;
+  position: relative;
+}
+header .logo {
+  width: 150px;
+  height: 30px;
+  display: flex;
+}
+
+footer {
+  background-color: #353535;
+}
+footer .footer-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px;
+  max-width: 500px;
+  margin: auto;
+}
+footer .footer-logo {
+  font-size: 20px;
+  padding-bottom: 18px;
+  color: white;
+  font-family: Shrikhand, "cursive";
+  font-weight: 200;
+}
+footer a {
+  padding-bottom: 10px;
+  text-decoration: none;
+  color: white;
+}
+footer a i {
+  font-size: 15px;
+  padding-right: 7px;
+}
+
+.head-menu img {
+  width: 100%;
+  max-height: 400px;
+  margin: 0px auto;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.menus-container {
+  background-color: #f6f6f6;
+  padding: 30px 20px;
+  border-radius: 25px 25px 0px 0px;
+  position: relative;
+  margin-top: -100px;
+  max-width: 500px;
+  margin: -100px auto 0px auto;
+}
+
+.titre-resto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+.titre-resto h1 {
+  font-size: 26px;
+  font-family: Shrikhand, "cursive";
+  font-weight: 400;
+}
+.titre-resto .coeur-plein {
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.5s;
+  position: absolute;
+  top: 36px;
+  right: 42px;
+}
+.titre-resto .coeur-creux {
+  mix-blend-mode: lighten;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.5s;
+  position: absolute;
+  top: 36px;
+  right: 42px;
+}
+.titre-resto .coeur-creux.coeur-creux:hover {
+  color: red !important;
+}
+.titre-resto .coeur-creux.coeur-plein:hover {
+  color: red !important;
+}
+
+.menu {
+  padding: 18px 0px;
+}
+.menu h2 {
+  position: relative;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+.menu h2::after {
+  content: "";
+  width: 60px;
+  height: 5px;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.menu-commande {
+  align-items: center;
+  padding: 14px 15px;
+  border-radius: 15px;
+  margin: 16px auto;
+  box-shadow: 2px 2px 2px 2px #ededed;
+  background-color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+  list-style-type: none;
+  transition: 0.5s;
+  justify-content: space-between;
+}
+.menu-commande .commande-texte h3 {
+  font-size: 20px;
+  padding-bottom: 8px;
+}
+.menu-commande .commande-texte span {
+  font-size: 17px;
+}
+.menu-commande .commande-price {
+  position: absolute;
+  top: 44px;
+  right: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.btn-commander {
+  padding: 40px 0;
+}
+.btn-commander a {
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  text-decoration: none;
+  border-radius: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 500;
+  color: white;
+  box-shadow: 0px 2px 4px 0px #80808059;
+  max-width: 220px;
+  margin: 0 auto;
+  padding: 2px 20px;
+}
+.btn-commander a:hover {
+  opacity: 0.7;
+}
