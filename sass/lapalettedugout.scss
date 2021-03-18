@@ -45,35 +45,37 @@ header{
         .menu-btn{
             
         }
+        .coeur-creux{
+            font-size: 25px;
+            color: #6a6a6a;
+            cursor: pointer;
+            position: absolute;
+            transition: all 0.3s ease;
+            background-color: transparent;
+                top: 36px;
+                right: 42px;
+            &:hover{
+                opacity: 1;
+                color: white;
+            }
+        }
         .coeur-plein{
             font-size: 25px;
+            color: #6a6a6a;
             cursor: pointer;
             transition: 0.5s;
+            opacity: 0;
+            background-color: transparent;
             position: absolute;
                 top: 36px;
                     right: 42px;
-            z-index: 1;
-            // opacity: 0;
-            
-        }
-        .coeur-creux{
-            font-size: 25px;
-            cursor: pointer;
-            transition: 0.5s;
-            position: absolute;
-            z-index: 2;
-                top: 36px;
-                right: 42px;
-        
-                &.coeur-creux:hover{
-                    color: red;
-                    
-                }
-                &.coeur-plein:hover{
-                    // color: red;
-                    // backgrounds: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc)) !important;
-                }
-
+            &:hover{
+                opacity: 1;
+                background-color: transparent;
+                background: -webkit-linear-gradient(0deg, #9356dc, #ff79da);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+            }
         }
     
 }

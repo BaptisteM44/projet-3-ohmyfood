@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -29,6 +30,47 @@ header .logo {
   display: flex;
 }
 
+footer {
+  background-color: #353535;
+}
+
+footer .footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px 30px;
+  max-width: 500px;
+  margin: auto;
+}
+
+footer .footer-logo {
+  font-size: 20px;
+  padding-bottom: 18px;
+  color: white;
+  font-family: Shrikhand,"cursive";
+  font-weight: 200;
+}
+
+footer a {
+  padding-bottom: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+footer a i {
+  font-size: 15px;
+  padding-right: 7px;
+}
+
+h1 {
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
 .lieu {
   background-color: #eaeaea;
   display: -webkit-box;
@@ -46,7 +88,7 @@ header .logo {
 }
 
 .lieu span {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .presentation {
@@ -62,7 +104,7 @@ header .logo {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  padding: 45px 35px;
+  padding: 45px 30px;
 }
 
 .presentation .title-section {
@@ -116,14 +158,10 @@ header .logo {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 45px 35px;
+  margin: auto;
 }
 
-.work h1 {
-  font-size: 24px;
-  padding-bottom: 10px;
-}
-
-.container .work-list {
+.work-list {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -142,22 +180,22 @@ header .logo {
   transition: 0.5s;
 }
 
-.container .work-list:hover {
+.work-list:hover {
   background-color: #f5edff;
 }
 
-.container .work-list:hover .work-icon {
+.work-list:hover .work-icon {
   color: #9356DC;
 }
 
-.container .work-icon {
+.work-icon {
   margin-right: 22px;
   color: #7e7e7e;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.container p {
+p {
   color: white;
   border-radius: 100%;
   width: 25px;
@@ -173,5 +211,148 @@ header .logo {
   position: absolute;
   left: -11px;
   background-color: #9356dc;
+}
+
+.resto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 45px 30px;
+  background-color: #f6f6f6;
+}
+
+.resto .container {
+  margin: auto;
+}
+
+.resto a {
+  text-decoration: none;
+}
+
+.resto a .text-img {
+  background-color: #99E2D0;
+  font-weight: 500;
+  color: #008766;
+  padding: 7px 12px;
+  border-radius: 4px;
+  position: absolute;
+  top: 15px;
+  right: 17px;
+}
+
+.resto .enseigne {
+  background-color: #ffffff;
+  width: auto;
+  height: 250px;
+  border-radius: 25px;
+  margin: 10px auto;
+  display: inline-block;
+  -webkit-box-shadow: 0px 2px 4px 0px #80808059;
+          box-shadow: 0px 2px 4px 0px #80808059;
+  overflow: hidden;
+  padding: 0px;
+  position: relative;
+}
+
+.resto .enseigne img {
+  height: 175px;
+  width: 100%;
+  border-radius: 25px 25px 0px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.resto .enseigne .coeur-creux {
+  font-size: 25px;
+  color: #6a6a6a;
+  cursor: pointer;
+  position: absolute;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  bottom: 28px;
+  right: 26px;
+}
+
+.resto .enseigne .coeur-creux:hover {
+  opacity: 1;
+  color: white;
+}
+
+.resto .enseigne .coeur-plein {
+  font-size: 25px;
+  color: #6a6a6a;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+  background-color: transparent;
+  position: absolute;
+  bottom: 28px;
+  right: 26px;
+}
+
+.resto .enseigne .coeur-plein:hover {
+  opacity: 1;
+  background-color: transparent;
+  background: -webkit-linear-gradient(0deg, #9356dc, #ff79da);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.enseigne-foot-texte {
+  padding: 14px 11px 6px 17px;
+  text-align: initial;
+}
+
+.enseigne-foot-texte h3 {
+  font-size: 18px;
+  padding-bottom: 5px;
+  color: black;
+}
+
+.enseigne-foot-texte span {
+  font-size: 16px;
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .resto {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .resto .container {
+    max-width: none;
+    margin: auto;
+  }
+  .resto .cards {
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .resto .enseigne {
+    width: 450px;
+  }
 }
 /*# sourceMappingURL=homepage.css.map */

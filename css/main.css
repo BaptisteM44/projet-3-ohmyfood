@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -111,7 +112,6 @@ h1 {
   display: flex;
   flex-direction: column;
   padding: 45px 35px;
-  max-width: 500px;
   margin: auto;
 }
 
@@ -135,12 +135,14 @@ h1 {
 .work-list:hover .work-icon {
   color: #9356DC;
 }
-.work-list .work-icon {
+
+.work-icon {
   margin-right: 22px;
   color: #7e7e7e;
   transition: 0.5s;
 }
-.work-list p {
+
+p {
   color: white;
   border-radius: 100%;
   width: 25px;
@@ -155,9 +157,11 @@ h1 {
 
 .resto {
   display: flex;
-  flex-direction: column;
   padding: 45px 30px;
   background-color: #f6f6f6;
+}
+.resto .container {
+  margin: auto;
 }
 .resto a {
   text-decoration: none;
@@ -193,28 +197,37 @@ h1 {
   object-fit: cover;
   background-repeat: no-repeat;
 }
+.resto .enseigne .coeur-creux {
+  font-size: 25px;
+  color: #6a6a6a;
+  cursor: pointer;
+  position: absolute;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  bottom: 28px;
+  right: 26px;
+}
+.resto .enseigne .coeur-creux:hover {
+  opacity: 1;
+  color: white;
+}
 .resto .enseigne .coeur-plein {
   font-size: 25px;
+  color: #6a6a6a;
   cursor: pointer;
   transition: 0.5s;
+  opacity: 0;
+  background-color: transparent;
   position: absolute;
   bottom: 28px;
   right: 26px;
 }
-.resto .enseigne .coeur-creux {
-  mix-blend-mode: lighten;
-  font-size: 25px;
-  cursor: pointer;
-  transition: 0.5s;
-  position: absolute;
-  bottom: 28px;
-  right: 26px;
-}
-.resto .enseigne .coeur-creux.coeur-creux:hover {
-  color: red !important;
-}
-.resto .enseigne .coeur-creux.coeur-plein:hover {
-  color: red !important;
+.resto .enseigne .coeur-plein:hover {
+  opacity: 1;
+  background-color: transparent;
+  background: -webkit-linear-gradient(0deg, #9356dc, #ff79da);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 .enseigne-foot-texte {
@@ -229,4 +242,29 @@ h1 {
 .enseigne-foot-texte span {
   font-size: 16px;
   color: black;
+}
+
+@media (min-width: 768px) {
+  .list {
+    display: flex;
+  }
+
+  .resto {
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+  }
+  .resto .container {
+    max-width: none;
+    margin: auto;
+  }
+  .resto .cards {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .resto .enseigne {
+    width: 450px;
+  }
 }
