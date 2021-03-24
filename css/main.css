@@ -10,6 +10,44 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.spinner {
+  z-index: 10000;
+  animation: loader 0.01s;
+  animation-fill-mode: both;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #9356DC;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+.double-bounce1.double-bounce2, .double-bounce2.double-bounce2 {
+  background-color: #99E2D0;
+}
+
+.double-bounce2 {
+  animation-delay: -1s;
+}
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
 header {
   display: flex;
   justify-content: center;
@@ -51,6 +89,11 @@ footer a i {
   padding-right: 7px;
 }
 
+@media (min-width: 768px) {
+  footer .footer-container {
+    align-items: center;
+  }
+}
 h1 {
   font-size: 24px;
   padding-bottom: 10px;
@@ -88,7 +131,7 @@ h1 {
   padding-bottom: 25px;
 }
 .presentation a {
-  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   text-decoration: none;
   border-radius: 50px;
   height: 50px;
@@ -152,7 +195,7 @@ p {
   align-content: center;
   position: absolute;
   left: -11px;
-  background-color: #9356dc;
+  background-color: #9356DC;
 }
 
 .resto {
@@ -225,7 +268,7 @@ p {
 .resto .enseigne .coeur-plein:hover {
   opacity: 1;
   background-color: transparent;
-  background: -webkit-linear-gradient(0deg, #9356dc, #ff79da);
+  background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
@@ -245,26 +288,33 @@ p {
 }
 
 @media (min-width: 768px) {
-  .list {
-    display: flex;
+  .work h1 {
+    margin: auto;
   }
 
-  .resto {
-    justify-content: space-between;
-    margin: auto;
-    align-items: center;
-  }
   .resto .container {
-    max-width: none;
     margin: auto;
+  }
+  .resto .container .title-section {
+    margin: 10px auto;
+    text-align: center;
   }
   .resto .cards {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
   .resto .enseigne {
     width: 450px;
+  }
+}
+@media (min-width: 1080px) {
+  .list {
+    display: flex;
+  }
+}
+@media (min-width: 1859px) {
+  .enseigne {
+    margin: auto 20px;
   }
 }

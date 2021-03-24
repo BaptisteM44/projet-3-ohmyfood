@@ -35,7 +35,7 @@ h1{
             padding-bottom: 25px;
         }
         a{
-            background: linear-gradient(to bottom right, #ff79da, #9356dc);
+            background: linear-gradient(to bottom right, $color-secondaire, $color-primaire);
             text-decoration: none;
             border-radius: 50px;
             height: 50px;
@@ -78,7 +78,7 @@ h1{
         &:hover{
             background-color: #f5edff;
             .work-icon{
-                color: #9356DC;
+                color: $color-primaire;
             }
         }
 }
@@ -86,9 +86,6 @@ h1{
     margin-right: 22px;
     color: #7e7e7e;
     transition: 0.5s;
-        // &:hover{
-        //     color: #9356DC;
-        // }
 }
 p{
     color: white;
@@ -100,7 +97,7 @@ p{
     align-content: center;
     position: absolute;
         left: -11px;
-    background-color: #9356dc;
+    background-color: $color-primaire;
 }
 .resto{
     display: flex;
@@ -112,7 +109,7 @@ p{
         a{
             text-decoration: none;
             .text-img{
-                background-color: #99E2D0;
+                background-color: $color-tertiaire;
                 font-weight: 500;
                 color: #008766;
                 padding: 7px 12px;
@@ -170,7 +167,7 @@ p{
                     &:hover{
                         opacity: 1;
                         background-color: transparent;
-                        background: -webkit-linear-gradient(0deg, #9356dc, #ff79da);
+                        background: -webkit-linear-gradient(0deg, $color-primaire, $color-secondaire);
                         -webkit-text-fill-color: transparent;
                         -webkit-background-clip: text;
                     }
@@ -194,34 +191,40 @@ p{
 
 @media (min-width: 768px){
 
-.list{
-    display: flex;
+.work{
+    h1{
+        margin: auto;
+    }
 }
-
 .resto{
-    justify-content: space-between;
-    margin: auto;
-    align-items: center;
-    .container{
-        max-width:none;
-        margin: auto;
-        
+        .container{
+            margin: auto;
+            .title-section{
+                margin: 10px auto;
+                text-align: center;
+            }
+            
+        }
+        .cards{
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        .enseigne{
+            width: 450px;
+        }
     }
-    .cards{
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .enseigne{
-        width: 450px;
-        
-        
-    }
-    
 }
-}
-
 @media (min-width: 1080px){
 
+    .list{
+        display: flex;
+    }
+
+}
+@media (min-width: 1859px){
+    .enseigne{
+        margin: auto 20px;
+    }
 }

@@ -1,6 +1,6 @@
 @import "commun";
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-
+@import "effect";
 
 header{
     .fa-arrow-left{
@@ -24,7 +24,7 @@ header{
 }
 .menus-container{
     background-color: #f6f6f6;
-    padding: 30px 20px;
+    padding: 30px 15px;
     border-radius: 25px 25px 0px 0px;
     position: relative;
     margin-top: -100px;
@@ -41,9 +41,6 @@ header{
             font-size: 26px;
             font-family: Shrikhand, "cursive";
             font-weight: 400;
-        }
-        .menu-btn{
-            
         }
         .coeur-creux{
             font-size: 25px;
@@ -72,7 +69,7 @@ header{
             &:hover{
                 opacity: 1;
                 background-color: transparent;
-                background: -webkit-linear-gradient(0deg, #9356dc, #ff79da);
+                background: -webkit-linear-gradient(0deg, $color-primaire, $color-secondaire);
                 -webkit-text-fill-color: transparent;
                 -webkit-background-clip: text;
             }
@@ -90,15 +87,15 @@ header{
         content: "";
         width: 60px;
         height: 5px;
-        background-color: #99e2d0;
+        background-color: $color-tertiaire;
         position: absolute;
         left: 0;
         bottom: 0;
     }
 }
 .menu-commande{
+    @include check;
     align-items: center;
-    padding: 14px 15px;
     border-radius: 15px;
     margin: 16px auto;
     box-shadow: 2px 2px 2px 2px #ededed;
@@ -109,23 +106,49 @@ header{
     position: relative;
     list-style-type: none;
     transition: 0.5s;
-    justify-content: space-between;
+    display: flex;
+    overflow: hidden;
+    // animation-delay: 1s;
+    // animation-name: glissement;
+    // @keyframes glissement {
+    //     from {
+    //       margin-left: 100%;
+    //     //   width: 300%;
+    //     }
+      
+    //     to {
+    //       margin-left: 0%;
+    //       width: 100%;
+    //     }
+    //   }
+
     .commande-texte{
+        padding: 14px 0px 15px 14px;
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
         h3{
-            font-size: 20px;
+            font-size: 17px;
             padding-bottom: 8px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: auto;
         }
         span{
-            font-size: 17px;
+            font-size: 14px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: block;
         }
     }
         .commande-price{
-            position: absolute;
-                top: 44px;
-                right: 20px;
-                font-weight: 500;
-                font-size: 18px;
-                font-weight: 600;
+            font-weight: 500;
+            font-size: 15px;
+            font-weight: 600;
+            align-self: flex-end;
+            padding: 14px;
         }
 }
 .btn-commander{
@@ -134,4 +157,20 @@ header{
         @include classic-button;
     }
     
+}
+@media (min-width: 1080px){
+
+    .menus-container{
+        max-width: 90%;
+        margin: -64px auto 0px auto;
+        .menu{
+            display: inline-block;            
+            margin: auto;
+            width: 33%;
+            .menu-commande{
+                max-width: 340px;
+            }
+        }
+
+    }
 }

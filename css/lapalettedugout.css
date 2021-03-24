@@ -8,6 +8,44 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.spinner {
+  z-index: 10000;
+  animation: loader 0.01s;
+  animation-fill-mode: both;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #9356DC;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+.double-bounce1.double-bounce2, .double-bounce2.double-bounce2 {
+  background-color: #99E2D0;
+}
+
+.double-bounce2 {
+  animation-delay: -1s;
+}
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
 header {
   display: flex;
   justify-content: center;
@@ -49,6 +87,11 @@ footer a i {
   padding-right: 7px;
 }
 
+@media (min-width: 768px) {
+  footer .footer-container {
+    align-items: center;
+  }
+}
 header .fa-arrow-left {
   position: absolute;
   top: 26px;
@@ -68,7 +111,7 @@ header .fa-arrow-left {
 
 .menus-container {
   background-color: #f6f6f6;
-  padding: 30px 20px;
+  padding: 30px 15px;
   border-radius: 25px 25px 0px 0px;
   position: relative;
   margin-top: -100px;
@@ -115,7 +158,7 @@ header .fa-arrow-left {
 .titre-resto .coeur-plein:hover {
   opacity: 1;
   background-color: transparent;
-  background: -webkit-linear-gradient(0deg, #9356dc, #ff79da);
+  background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
@@ -132,7 +175,7 @@ header .fa-arrow-left {
   content: "";
   width: 60px;
   height: 5px;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -140,7 +183,6 @@ header .fa-arrow-left {
 
 .menu-commande {
   align-items: center;
-  padding: 14px 15px;
   border-radius: 15px;
   margin: 16px auto;
   box-shadow: 2px 2px 2px 2px #ededed;
@@ -151,22 +193,58 @@ header .fa-arrow-left {
   position: relative;
   list-style-type: none;
   transition: 0.5s;
-  justify-content: space-between;
+  display: flex;
+  overflow: hidden;
+}
+.menu-commande:hover .commande-check {
+  margin-right: 0px;
+  transition: 0.5s;
+}
+.menu-commande:hover .commande-check i {
+  transform: rotate(1turn);
+  transition: transform 500ms ease-in-out;
+}
+.menu-commande .commande-check {
+  display: flex;
+  align-items: center;
+  background-color: #99e2d0;
+  width: 60px;
+  height: 73px;
+  justify-content: center;
+  margin-right: -53px;
+  transition: 0.5s;
+}
+.menu-commande .commande-check i {
+  font-size: 20px;
+  color: white;
+}
+.menu-commande .commande-texte {
+  padding: 14px 0px 15px 14px;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu-commande .commande-texte h3 {
-  font-size: 20px;
+  font-size: 17px;
   padding-bottom: 8px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: auto;
 }
 .menu-commande .commande-texte span {
-  font-size: 17px;
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
 }
 .menu-commande .commande-price {
-  position: absolute;
-  top: 44px;
-  right: 20px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
+  align-self: flex-end;
+  padding: 14px;
 }
 
 .btn-commander {
@@ -191,4 +269,19 @@ header .fa-arrow-left {
 }
 .btn-commander a:hover {
   opacity: 0.7;
+}
+
+@media (min-width: 1080px) {
+  .menus-container {
+    max-width: 90%;
+    margin: -64px auto 0px auto;
+  }
+  .menus-container .menu {
+    display: inline-block;
+    margin: auto;
+    width: 33%;
+  }
+  .menus-container .menu .menu-commande {
+    max-width: 340px;
+  }
 }
