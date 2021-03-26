@@ -11,54 +11,57 @@ body{
 font-family: 'Roboto', sans-serif;
 }
 // -------------------loading spinner-------------------//
-.spinner {
-  z-index: 10000;
-  animation: loader .01s;
-  animation-fill-mode: both;
-    width: 40px;
-    height: 40px;
-    position: relative;
-    margin: 100px auto;
-  }
-  
-  .double-bounce1, .double-bounce2 {
+.space_spinner{
+    z-index: 1000;
+    position:fixed;
     width: 100%;
     height: 100%;
-    border-radius: 50%;
-    background-color: #9356DC;
-    opacity: 0.8;
-    position: absolute;
-    top: 0;
-    left: 0;
-    
-    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
-    animation: sk-bounce 2.0s infinite ease-in-out;
-    &.double-bounce2{
-        background-color: #99E2D0;
-    }
-  }
-  
-  .double-bounce2 {
-    -webkit-animation-delay: -1.0s;
-    animation-delay: -1.0s;
-  }
-  
-  @-webkit-keyframes sk-bounce {
-    0%, 100% { -webkit-transform: scale(0.0) }
-    50% { -webkit-transform: scale(1.0) }
-  }
-  
-  @keyframes sk-bounce {
-    0%, 100% { 
-      transform: scale(0.0);
-      -webkit-transform: scale(0.0);
-    } 50% { 
-      transform: scale(1.0);
-      -webkit-transform: scale(1.0);
-    }
-  }
+    background-color: rgba(255, 255, 255,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        &{
+            animation: space_spin 3s ease-in-out;
+                > .spinner{
+                    animation: spin infinite 3s ease-in-out;
+                }
+        }
+     
+}
+ 
+.spinner{
+    width: 50px;
+    height: 50px;
+    border: 10px dashed $color-primaire;
+    border-left-color: $color-secondaire;
+    border-bottom-color: transparent;
+    border-right-color: $color-tertiaire ;
+    border-radius: 100%;
+     
+}
 
-
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+ 
+@keyframes space_spin{
+    0%{
+        scale: 0;
+    }
+    100% {
+        scale: 1;
+        display: none;
+        opacity: 0;
+        z-index: -100;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+}
 // -------------------header-------------------//
 header{
     display: flex;
@@ -112,7 +115,7 @@ footer{
 
 // -------------------button-------------------//
 @mixin classic-button{
-    background: linear-gradient(to bottom right, #ff79da, #9356dc);
+    background: linear-gradient(to bottom right, $color-secondaire, $color-primaire);
     text-decoration: none;
     border-radius: 50px;
     height: 50px;
