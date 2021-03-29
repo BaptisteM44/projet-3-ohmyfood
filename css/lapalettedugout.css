@@ -19,10 +19,10 @@ body {
   align-items: center;
 }
 .space_spinner {
-  animation: space_spin 3s ease-in-out;
+  animation: space_spin 4s forwards;
 }
 .space_spinner > .spinner {
-  animation: spin infinite 3s ease-in-out;
+  animation: spin infinite 4s forwards;
 }
 
 .spinner {
@@ -47,13 +47,14 @@ body {
   0% {
     scale: 0;
   }
+  75% {
+    opacity: 0;
+  }
   100% {
     scale: 1;
     display: none;
     opacity: 0;
-    z-index: -100;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
+    z-index: -1000;
   }
 }
 header {
@@ -102,6 +103,33 @@ footer a i {
     align-items: center;
   }
 }
+.delay {
+  opacity: 0;
+  animation: delays 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes delays {
+  0% {
+    opacity: 0;
+    margin-top: 1.875rem;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+.delay1 {
+  animation-delay: 0s;
+}
+
+.delay2 {
+  animation-delay: 0.2s;
+}
+
+.delay3 {
+  animation-delay: 0.4s;
+}
+
 header .fa-arrow-left {
   position: absolute;
   top: 26px;

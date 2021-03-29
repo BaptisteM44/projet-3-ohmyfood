@@ -26,3 +26,46 @@
     }
     
 }
+.delay {
+    opacity: 0;
+    -webkit-animation: delays 1s;
+            animation: delays 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  
+@-webkit-keyframes delays {
+0% {
+    opacity: 0;
+    margin-top: 1.875rem;
+}
+100% {
+    opacity: 1;
+    margin-top: 0;
+}
+}
+  
+  @keyframes delays {
+    0% {
+      opacity: 0;
+      margin-top: 1.875rem;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 0;
+    }
+  }
+.delay1 {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+    
+.delay2 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.delay3 {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
