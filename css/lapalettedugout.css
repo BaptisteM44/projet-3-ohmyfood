@@ -124,6 +124,10 @@ footer a i {
   animation-delay: 0.6s;
 }
 
+.delay4 {
+  animation-delay: 0.8s;
+}
+
 header .fa-arrow-left {
   position: absolute;
   top: 26px;
@@ -303,13 +307,13 @@ header .fa-arrow-left {
   opacity: 0.7;
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1136px) {
   .menus-container {
     max-width: 90%;
     margin: -64px auto 0px auto;
   }
   .menus-container .menu {
-    display: inline-block;
+    display: inline-table;
     margin: auto;
     width: 33%;
   }

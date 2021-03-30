@@ -212,6 +212,25 @@ h1 {
 }
 .resto a {
   text-decoration: none;
+  background-color: #ffffff;
+  width: auto;
+  height: 250px;
+  border-radius: 25px;
+  margin: 10px auto;
+  display: block;
+  box-shadow: 0px 2px 4px 0px #80808059;
+  overflow: hidden;
+  padding: 0px;
+  position: relative;
+}
+.resto a img {
+  height: 175px;
+  width: 100%;
+  border-radius: 25px 25px 0px 0px;
+  display: flex;
+  background-position: center;
+  object-fit: cover;
+  background-repeat: no-repeat;
 }
 .resto a .text-img {
   background-color: #99E2D0;
@@ -224,25 +243,7 @@ h1 {
   right: 17px;
 }
 .resto .enseigne {
-  background-color: #ffffff;
-  width: auto;
-  height: 250px;
-  border-radius: 25px;
-  margin: 10px auto;
-  display: inline-block;
-  box-shadow: 0px 2px 4px 0px #80808059;
-  overflow: hidden;
-  padding: 0px;
   position: relative;
-}
-.resto .enseigne img {
-  height: 175px;
-  width: 100%;
-  border-radius: 25px 25px 0px 0px;
-  display: flex;
-  background-position: center;
-  object-fit: cover;
-  background-repeat: no-repeat;
 }
 .resto .enseigne .coeur-creux {
   font-size: 25px;
@@ -303,22 +304,19 @@ h1 {
     margin: 10px auto;
     text-align: center;
   }
+  .resto .enseigne a {
+    width: 310px;
+    margin: 8px 15px;
+  }
   .resto .cards {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-  }
-  .resto .enseigne {
-    width: 450px;
+    justify-content: space-around;
   }
 }
 @media (min-width: 1080px) {
   .list {
     display: flex;
-  }
-}
-@media (min-width: 1859px) {
-  .enseigne {
-    margin: auto 20px;
   }
 }

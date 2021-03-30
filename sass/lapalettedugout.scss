@@ -144,13 +144,13 @@ header{
     }
     
 }
-@media (min-width: 1080px){
+@media (min-width: 1136px){
 
     .menus-container{
         max-width: 90%;
         margin: -64px auto 0px auto;
         .menu{
-            display: inline-block;            
+            display: inline-table;            
             margin: auto;
             width: 33%;
             .menu-commande{

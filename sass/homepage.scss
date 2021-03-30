@@ -101,9 +101,6 @@ h1{
             }
     }
 }
-
-
-
 .resto{
     display: flex;
     padding: 45px 30px;
@@ -113,6 +110,25 @@ h1{
     }
         a{
             text-decoration: none;
+            background-color: #ffffff;
+            width: auto;
+            height: 250px;
+            border-radius: 25px;
+            margin: 10px auto;
+            display: block;
+            box-shadow: 0px 2px 4px 0px #80808059;
+            overflow: hidden;
+            padding: 0px;
+            position: relative;
+            & img{
+                    height: 175px;
+                    width: 100%;
+                    border-radius: 25px 25px 0px 0px;
+                    display: flex;
+                    background-position: center;
+                    object-fit: cover;
+                    background-repeat: no-repeat;
+                }
             .text-img{
                 background-color: $color-tertiaire;
                 font-weight: 500;
@@ -125,26 +141,7 @@ h1{
             }
         }
         .enseigne{
-            background-color: #ffffff;
-            width: auto;
-            height: 250px;
-            border-radius: 25px;
-            margin: 10px auto;
-            display: inline-block;
-            box-shadow: 0px 2px 4px 0px #80808059;
-            overflow: hidden;
-            padding: 0px;
             position: relative;
-                & img{
-                    height: 175px;
-                    width: 100%;
-                    border-radius: 25px 25px 0px 0px;
-                    display: flex;
-                    background-position: center;
-                    object-fit: cover;
-                    background-repeat: no-repeat;
-                }
-
                 .coeur-creux{
                     font-size: 25px;
                     color: #6a6a6a;
@@ -210,26 +207,24 @@ h1{
             }
             
         }
+        .enseigne{
+            a{
+                width: 310px;
+                margin: 8px 15px;  
+            }
+            
+        }
         .cards{
             margin: auto;
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-around;
             
-        }
-        .enseigne{
-            width: 450px;
         }
     }
 }
 @media (min-width: 1080px){
-
     .list{
-        display: flex;
-    }
-
-}
-@media (min-width: 1859px){
-    .enseigne{
-        margin: auto 20px;
-    }
+            display: flex;
+        }
 }
