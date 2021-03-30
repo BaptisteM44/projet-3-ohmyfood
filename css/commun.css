@@ -18,10 +18,10 @@ body {
   align-items: center;
 }
 .space_spinner {
-  animation: space_spin 4s forwards;
+  animation: space_spin 3s forwards;
 }
 .space_spinner > .spinner {
-  animation: spin infinite 4s forwards;
+  animation: spin infinite 3s forwards;
 }
 
 .spinner {
@@ -43,14 +43,10 @@ body {
   }
 }
 @keyframes space_spin {
-  0% {
-    scale: 0;
-  }
-  75% {
-    opacity: 0;
+  50% {
+    opacity: 0.5;
   }
   100% {
-    scale: 1;
     display: none;
     opacity: 0;
     z-index: -1000;

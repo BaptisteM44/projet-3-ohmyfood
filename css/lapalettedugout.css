@@ -19,10 +19,10 @@ body {
   align-items: center;
 }
 .space_spinner {
-  animation: space_spin 4s forwards;
+  animation: space_spin 3s forwards;
 }
 .space_spinner > .spinner {
-  animation: spin infinite 4s forwards;
+  animation: spin infinite 3s forwards;
 }
 
 .spinner {
@@ -44,14 +44,10 @@ body {
   }
 }
 @keyframes space_spin {
-  0% {
-    scale: 0;
-  }
-  75% {
-    opacity: 0;
+  50% {
+    opacity: 0.5;
   }
   100% {
-    scale: 1;
     display: none;
     opacity: 0;
     z-index: -1000;
@@ -103,31 +99,29 @@ footer a i {
     align-items: center;
   }
 }
-.delay {
+.menu-commande {
   opacity: 0;
-  animation: delays 1s;
+  animation: delays 2s;
   animation-fill-mode: forwards;
 }
 @keyframes delays {
   0% {
     opacity: 0;
-    margin-top: 1.875rem;
   }
   100% {
     opacity: 1;
-    margin-top: 0;
   }
 }
 .delay1 {
-  animation-delay: 0s;
-}
-
-.delay2 {
   animation-delay: 0.2s;
 }
 
-.delay3 {
+.delay2 {
   animation-delay: 0.4s;
+}
+
+.delay3 {
+  animation-delay: 0.6s;
 }
 
 header .fa-arrow-left {
