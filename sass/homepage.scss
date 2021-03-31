@@ -109,6 +109,7 @@ h1{
         margin: auto;
     }
         a{
+            
             text-decoration: none;
             background-color: #ffffff;
             width: auto;
@@ -120,6 +121,13 @@ h1{
             overflow: hidden;
             padding: 0px;
             position: relative;
+            &:hover{
+                img{
+                    transform: scale(1.03);
+                    transition: 0.2s ease-in-out;
+                    color: $color-primaire;  
+                }                
+            }
             & img{
                     height: 175px;
                     width: 100%;

@@ -13,16 +13,16 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.999);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .space_spinner {
-  animation: space_spin 3s forwards;
+  animation: space_spin 4s forwards;
 }
 .space_spinner > .spinner {
-  animation: spin infinite 3s forwards;
+  animation: spin infinite 4s forwards;
 }
 
 .spinner {
@@ -44,8 +44,8 @@ body {
   }
 }
 @keyframes space_spin {
-  50% {
-    opacity: 0.5;
+  0% {
+    opacity: 1;
   }
   100% {
     display: none;
@@ -88,6 +88,12 @@ footer a {
   padding-bottom: 10px;
   text-decoration: none;
   color: white;
+}
+footer a:hover {
+  color: #9356DC;
+}
+footer a:hover i {
+  color: #99E2D0;
 }
 footer a i {
   font-size: 15px;
@@ -222,6 +228,11 @@ h1 {
   overflow: hidden;
   padding: 0px;
   position: relative;
+}
+.resto a:hover img {
+  transform: scale(1.03);
+  transition: 0.2s ease-in-out;
+  color: #9356DC;
 }
 .resto a img {
   height: 175px;
