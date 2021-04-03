@@ -28,7 +28,7 @@ body {
 .spinner {
   width: 50px;
   height: 50px;
-  border: 10px dashed #9356DC;
+  border: 10px double #9356DC;
   border-left-color: #FF79DA;
   border-bottom-color: transparent;
   border-right-color: #99E2D0;
@@ -260,9 +260,9 @@ h1 {
   font-size: 25px;
   color: #6a6a6a;
   cursor: pointer;
-  position: absolute;
   transition: all 0.3s ease;
   background-color: transparent;
+  position: absolute;
   bottom: 28px;
   right: 26px;
 }
@@ -287,6 +287,7 @@ h1 {
   background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+          background-clip: text;
 }
 
 .enseigne-foot-texte {

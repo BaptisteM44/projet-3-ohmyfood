@@ -71,7 +71,7 @@ header{
                 background-color: transparent;
                 background: -webkit-linear-gradient(0deg, $color-primaire, $color-secondaire);
                 -webkit-text-fill-color: transparent;
-                -webkit-background-clip: text;
+                background-clip: text;
             }
         }
     

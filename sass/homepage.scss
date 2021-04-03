@@ -154,9 +154,9 @@ h1{
                     font-size: 25px;
                     color: #6a6a6a;
                     cursor: pointer;
-                    position: absolute;
                     transition: all 0.3s ease;
                     background-color: transparent;
+                    position: absolute;
                         bottom: 28px;
                         right: 26px;
                     &:hover{
@@ -179,7 +179,7 @@ h1{
                         background-color: transparent;
                         background: -webkit-linear-gradient(0deg, $color-primaire, $color-secondaire);
                         -webkit-text-fill-color: transparent;
-                        -webkit-background-clip: text;
+                        background-clip: text;
                     }
                 }
                     

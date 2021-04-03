@@ -3,6 +3,7 @@
   animation: delays 2s;
   animation-fill-mode: forwards;
 }
+
 @keyframes delays {
   0% {
     opacity: 0;
