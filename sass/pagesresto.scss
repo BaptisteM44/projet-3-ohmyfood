@@ -149,6 +149,9 @@ header{
     .menus-container{
         max-width: 90%;
         margin: -64px auto 0px auto;
+        .titre-resto{
+            justify-content: center;
+        }
         .menu{
             display: inline-table;            
             margin: auto;

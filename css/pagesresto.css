@@ -321,6 +321,9 @@ header .fa-arrow-left {
     max-width: 90%;
     margin: -64px auto 0px auto;
   }
+  .menus-container .titre-resto {
+    justify-content: center;
+  }
   .menus-container .menu {
     display: inline-table;
     margin: auto;
