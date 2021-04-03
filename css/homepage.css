@@ -287,6 +287,7 @@ h1 {
   background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+          background-clip: text;
 }
 
 .enseigne-foot-texte {
