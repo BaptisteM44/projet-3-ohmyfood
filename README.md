@@ -3,7 +3,7 @@
 Troisième projet du parcours "Développeur web" chez OpenClassroom. L'objectif d'intégrer puis de dynamiser une page web avec des animations CSS en utilisant le préprocesseur Sass
 <div style="display:flex">
   <img src="https://user-images.githubusercontent.com/72301084/162204413-913c1c6d-011f-4d19-bffc-e0a5171dd796.png">
-  <img src="https://user-images.githubusercontent.com/72301084/162204442-ec986073-fe12-4563-a8cb-fce4bd04327e.png" width="100" height="400">
+  <img style="text-align:center" src="https://user-images.githubusercontent.com/72301084/162204442-ec986073-fe12-4563-a8cb-fce4bd04327e.png" width="100" height="400">
 </div>
 ## Objectif
 
