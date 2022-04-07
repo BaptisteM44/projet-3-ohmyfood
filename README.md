@@ -5,6 +5,7 @@ Troisième projet du parcours "Développeur web" chez OpenClassroom. L'objectif 
 
 ![indexP3](https://user-images.githubusercontent.com/72301084/162204413-913c1c6d-011f-4d19-bffc-e0a5171dd796.png)
 ![responsiveP3](https://user-images.githubusercontent.com/72301084/162204442-ec986073-fe12-4563-a8cb-fce4bd04327e.png =100x400)
+<img src="https://user-images.githubusercontent.com/72301084/162204442-ec986073-fe12-4563-a8cb-fce4bd04327e.png" width="100" height="400">
 
 ## Objectif
 
